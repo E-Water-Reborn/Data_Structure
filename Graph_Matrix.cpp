@@ -1,4 +1,5 @@
 #include<iostream>
+#include"Queue.cpp"
 using namespace std;
 
 #define MaxVertexNum 100
@@ -66,4 +67,43 @@ MGraph BuildGraph()
 		cin >> Graph->Data[V];
 	
 	return Graph;
+}
+
+void Visit(Vertex V)
+{
+	cout << "ีýิฺทรฮส" << V << endl;
+}
+
+bool Visited[MaxVertexNum] = { false };
+
+bool IsEdge(MGraph Graph, Vertex V, Vertex W)
+{
+	return Graph->G[V][W] < INFINITY ? true : false;
+}
+
+void BFS(MGraph Graph, Vertex S, void(*Visit)(Vertex))
+{
+	Queue Q;
+	Vertex V, W;
+
+	Q = CreateQueue(Graph->Nv);
+	Visit(S);
+	Visited[S] = true;
+	AddQ(Q, S);
+
+	while (!IsEmpty(Q)) {
+		V = DeleteQ(Q);
+		for (W = 0; W < Graph->Nv; ++W) {
+			if (IsEdge(Graph, V, W) && !Visited[W]) {
+				Visit(W);
+				Visited[W] = true;
+				AddQ(Q, W);
+			}
+		}
+	}
+}
+
+bool Dijkstra(MGraph Graph, int dist[], int path[], Vertex S)
+{
+
 }

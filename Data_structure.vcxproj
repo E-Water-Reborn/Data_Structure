@@ -143,8 +143,10 @@
     <ClCompile Include="BinarySearchTree.cpp" />
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="BinaryTreeEG.cpp" />
+    <ClCompile Include="Dijkstra.cpp" />
     <ClCompile Include="DStack.cpp" />
     <ClCompile Include="FindKthLargest.cpp" />
+    <ClCompile Include="Floyd.cpp" />
     <ClCompile Include="GList.cpp" />
     <ClCompile Include="Graph_Link.cpp" />
     <ClCompile Include="Graph_Matrix.cpp" />
@@ -158,6 +160,7 @@
     <ClCompile Include="Linked_Stack.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Maze.cpp" />
+    <ClCompile Include="MinSpanningTree.cpp" />
     <ClCompile Include="Polynomial.cpp" />
     <ClCompile Include="PostfixExp.cpp" />
     <ClCompile Include="Queue.cpp" />

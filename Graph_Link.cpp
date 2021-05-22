@@ -1,4 +1,5 @@
 #include<iostream>
+#include<queue>
 using namespace std;
 
 #define MaxVertexNum 100
@@ -111,4 +112,26 @@ void DFS(LGraph Graph, Vertex V, void (*Visit)(Vertex))
 	for (W = Graph->G[V].FirstEdge; W; W = W->Next)
 		if (!Visited[W->AdjV])
 			DFS(Graph, W->AdjV, Visit);
+}
+
+void Unweighted(LGraph Graph, int dist[], int path[], Vertex S)
+{
+	queue<int> Q;
+	Vertex V;
+	PtrToAdjVNode W;
+
+	Q.push(S);
+	dist[S] = 0;
+
+	while (!Q.empty()) {
+		V = Q.front();
+		Q.pop();
+		for (W = Graph->G[V].FirstEdge; W; W = W->Next) {
+			if (dist[W->AdjV] == -1) {
+				Q.push(W->AdjV);
+				dist[W->AdjV] = dist[V] + 1;
+				path[W->AdjV] = V;
+			}
+		}
+	}
 }

@@ -99,5 +99,14 @@
     <ClCompile Include="PostfixExp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="MinSpanningTree.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Dijkstra.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Floyd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
